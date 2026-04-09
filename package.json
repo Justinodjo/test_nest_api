@@ -7,12 +7,11 @@
   "private": true,
   "license": "MIT",
   "scripts": {
-    "build": "nest build",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
-    "start": "nest start",
-    "start:dev": "node src/main.js",
+    "start": "node -r reflect-metadata/Reflect src/main.js",
+    "start:dev": "nodemon --require reflect-metadata/Reflect src/main.js",
     "start:debug": "nest start --debug --watch",
-    "start:prod": "node dist/main",
+    "start:prod": "node -r reflect-metadata/Reflect src/main.js",
     "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
     "test": "jest",
     "test:watch": "jest --watch",
@@ -67,7 +66,7 @@
     "ts-loader": "^9.5.2",
     "ts-node": "^10.9.2",
     "tsconfig-paths": "^4.2.0",
-    "typescript": "^6.0.2",
+    "typescript": "^5.4.5",
     "typescript-eslint": "^8.20.0"
   },
   "jest": {
