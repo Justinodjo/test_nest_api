@@ -86,11 +86,11 @@ async function bootstrap() {
       .swagger-ui .scheme-container { background: #f8f9fa; padding: 15px; border-radius: 8px; }
     `,
   });
- const apiUrl = process.env.API_URL || `http://localhost:3000/api/v1`;
+//  const apiUrl = process.env.API_URL || `http://localhost:3000/api/v1`;
   const port = process.env.PORT || 3000;
   await app.listen(port, '0.0.0.0');
 
-  logger.log(`🚀 Application démarrée sur: ${apiUrl}`);
+  logger.log(`🚀 Application démarrée sur: http://localhost:${port}/api/v1`);
   logger.log(`📚 Documentation Swagger: http://localhost:${port}/api/docs`);
   logger.log(`🔑 Admin par défaut: admin@example.com / Admin@1234`);
 }
