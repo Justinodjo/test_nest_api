@@ -65,6 +65,7 @@ npm run start:dev
 |---|---|
 | `http://localhost:3000/api/v1` | Base URL |
 | `http://localhost:3000/api/docs` | Swagger UI |
+| `https://dev.odjo.tech/api/docs` | Swagger UI |
 
 ---
 
